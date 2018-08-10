@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31080DA5211D8A7D00084247 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31080DA4211D8A7D00084247 /* UIViewExtension.swift */; };
+		31080DA7211D8AE500084247 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31080DA6211D8AE500084247 /* BaseController.swift */; };
+		31080DA9211D8B0100084247 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31080DA8211D8B0100084247 /* RequestManager.swift */; };
+		31080DAB211D8B4500084247 /* PlaceHolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31080DAA211D8B4500084247 /* PlaceHolderView.swift */; };
+		31080DB2211D8C3D00084247 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31080DB1211D8C3D00084247 /* MainVC.swift */; };
+		31080DB4211D8C9300084247 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31080DB3211D8C9300084247 /* Color.swift */; };
+		31080DB7211D8CEE00084247 /* Themed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31080DB6211D8CEE00084247 /* Themed.swift */; };
+		31080DB9211D8E8A00084247 /* ThemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31080DB8211D8E8A00084247 /* ThemProvider.swift */; };
 		31844A36211D80AB00A2F465 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31844A35211D80AB00A2F465 /* AppDelegate.swift */; };
 		31844A38211D80AB00A2F465 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31844A37211D80AB00A2F465 /* ViewController.swift */; };
 		31844A3B211D80AB00A2F465 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31844A39211D80AB00A2F465 /* Main.storyboard */; };
@@ -36,6 +44,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		31080DA4211D8A7D00084247 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		31080DA6211D8AE500084247 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		31080DA8211D8B0100084247 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		31080DAA211D8B4500084247 /* PlaceHolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderView.swift; sourceTree = "<group>"; };
+		31080DB1211D8C3D00084247 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		31080DB3211D8C9300084247 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		31080DB6211D8CEE00084247 /* Themed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themed.swift; sourceTree = "<group>"; };
+		31080DB8211D8E8A00084247 /* ThemProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemProvider.swift; sourceTree = "<group>"; };
 		31844A32211D80AB00A2F465 /* Rx.swiftPractise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rx.swiftPractise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31844A35211D80AB00A2F465 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31844A37211D80AB00A2F465 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +106,77 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		31080D9F211D8A3C00084247 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				31080DAD211D8BE800084247 /* Code */,
+				31080DAE211D8BE800084247 /* Them */,
+				31080DAC211D8BE800084247 /* Tool */,
+				31080DA0211D8A3C00084247 /* Extension */,
+				31080DA1211D8A3C00084247 /* UIKit */,
+				31080DA2211D8A3C00084247 /* Request */,
+				31080DA3211D8A3C00084247 /* Base */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		31080DA0211D8A3C00084247 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				31080DA4211D8A7D00084247 /* UIViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		31080DA1211D8A3C00084247 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				31080DAA211D8B4500084247 /* PlaceHolderView.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		31080DA2211D8A3C00084247 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				31080DA8211D8B0100084247 /* RequestManager.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		31080DA3211D8A3C00084247 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				31080DA6211D8AE500084247 /* BaseController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		31080DAC211D8BE800084247 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				31080DB3211D8C9300084247 /* Color.swift */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		31080DAD211D8BE800084247 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				31080DB1211D8C3D00084247 /* MainVC.swift */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		31080DAE211D8BE800084247 /* Them */ = {
+			isa = PBXGroup;
+			children = (
+				31080DB6211D8CEE00084247 /* Themed.swift */,
+				31080DB8211D8E8A00084247 /* ThemProvider.swift */,
+			);
+			path = Them;
+			sourceTree = "<group>";
+		};
 		31844A29211D80AB00A2F465 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +202,7 @@
 		31844A34211D80AB00A2F465 /* Rx.swiftPractise */ = {
 			isa = PBXGroup;
 			children = (
+				31080D9F211D8A3C00084247 /* Source */,
 				31844A35211D80AB00A2F465 /* AppDelegate.swift */,
 				31844A37211D80AB00A2F465 /* ViewController.swift */,
 				31844A39211D80AB00A2F465 /* Main.storyboard */,
@@ -222,6 +310,7 @@
 				TargetAttributes = {
 					31844A31211D80AB00A2F465 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					31844A48211D80B000A2F465 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -348,7 +437,15 @@
 			files = (
 				31844A38211D80AB00A2F465 /* ViewController.swift in Sources */,
 				31844A36211D80AB00A2F465 /* AppDelegate.swift in Sources */,
+				31080DB9211D8E8A00084247 /* ThemProvider.swift in Sources */,
+				31080DA5211D8A7D00084247 /* UIViewExtension.swift in Sources */,
+				31080DAB211D8B4500084247 /* PlaceHolderView.swift in Sources */,
+				31080DA9211D8B0100084247 /* RequestManager.swift in Sources */,
+				31080DB2211D8C3D00084247 /* MainVC.swift in Sources */,
 				31844A3E211D80AB00A2F465 /* Rx_swiftPractise.xcdatamodeld in Sources */,
+				31080DA7211D8AE500084247 /* BaseController.swift in Sources */,
+				31080DB7211D8CEE00084247 /* Themed.swift in Sources */,
+				31080DB4211D8C9300084247 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +619,7 @@
 			baseConfigurationReference = D61E6219D686E9C728DFB4BD /* Pods-Rx.swiftPractise.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Rx.swiftPractise/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -530,6 +628,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "mac.Rx-swiftPractise";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -540,6 +639,7 @@
 			baseConfigurationReference = 55BBBF995D2811DD1E361FBC /* Pods-Rx.swiftPractise.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Rx.swiftPractise/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
