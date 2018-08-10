@@ -17,6 +17,7 @@
 		31080DB9211D8E8A00084247 /* ThemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31080DB8211D8E8A00084247 /* ThemProvider.swift */; };
 		31080DBB211D910400084247 /* BaseTableBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31080DBA211D910400084247 /* BaseTableBarVC.swift */; };
 		31080DBD211D912600084247 /* BaseNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31080DBC211D912600084247 /* BaseNavigationVC.swift */; };
+		31080DC0211D94F800084247 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31080DBF211D94F800084247 /* R.generated.swift */; };
 		31844A36211D80AB00A2F465 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31844A35211D80AB00A2F465 /* AppDelegate.swift */; };
 		31844A38211D80AB00A2F465 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31844A37211D80AB00A2F465 /* ViewController.swift */; };
 		31844A3B211D80AB00A2F465 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31844A39211D80AB00A2F465 /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 		31080DB8211D8E8A00084247 /* ThemProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemProvider.swift; sourceTree = "<group>"; };
 		31080DBA211D910400084247 /* BaseTableBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableBarVC.swift; sourceTree = "<group>"; };
 		31080DBC211D912600084247 /* BaseNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationVC.swift; sourceTree = "<group>"; };
+		31080DBF211D94F800084247 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = Rx.swiftPractise/R.generated.swift; sourceTree = SOURCE_ROOT; };
 		31844A32211D80AB00A2F465 /* Rx.swiftPractise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rx.swiftPractise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31844A35211D80AB00A2F465 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31844A37211D80AB00A2F465 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		31080DAC211D8BE800084247 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				31080DBF211D94F800084247 /* R.generated.swift */,
 				31080DB3211D8C9300084247 /* Color.swift */,
 			);
 			path = Tool;
@@ -254,6 +257,7 @@
 			buildConfigurationList = 31844A5D211D80B100A2F465 /* Build configuration list for PBXNativeTarget "Rx.swiftPractise" */;
 			buildPhases = (
 				B7CCB9EB3D87D1A8BA3DA2DB /* [CP] Check Pods Manifest.lock */,
+				31080DBE211D93B600084247 /* ShellScript */,
 				31844A2E211D80AB00A2F465 /* Sources */,
 				31844A2F211D80AB00A2F465 /* Frameworks */,
 				31844A30211D80AB00A2F465 /* Resources */,
@@ -376,6 +380,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		31080DBE211D93B600084247 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/Rx.swiftPractise\"";
+		};
 		B7CCB9EB3D87D1A8BA3DA2DB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -442,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31080DBB211D910400084247 /* BaseTableBarVC.swift in Sources */,
+				31080DC0211D94F800084247 /* R.generated.swift in Sources */,
 				31844A38211D80AB00A2F465 /* ViewController.swift in Sources */,
 				31844A36211D80AB00A2F465 /* AppDelegate.swift in Sources */,
 				31080DB9211D8E8A00084247 /* ThemProvider.swift in Sources */,
