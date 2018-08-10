@@ -34,7 +34,7 @@ DEPENDENCIES:
   - ZKProgressHUD
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Action
     - Alamofire
     - Differentiator
@@ -66,4 +66,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 430f6bd3b9f4208f640bbc21d38618c797f99adb
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.5.0
