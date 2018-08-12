@@ -21,7 +21,6 @@ class BaseTableBarVC: UITabBarController {
 }
 
 extension BaseTableBarVC :Themed {
-    
     func applyTheme(_ theme: AppThemes) {
         tabBar.barTintColor = theme.barBackgroundColor
         tabBar.tintColor = theme.barForegroundColor

@@ -1,5 +1,5 @@
 //
-//  BaseControllerView.swift
+//  MainVC.swift
 //  Rx.swiftPractise
 //
 //  Created by 白海瑞 on 2018/8/10.
@@ -7,15 +7,17 @@
 //
 
 import UIKit
-
-class BaseController: UIViewController {
+//import Rswift
+import Alamofire
+class MainVC: BaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
         
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 }

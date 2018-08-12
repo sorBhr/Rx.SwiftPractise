@@ -4,6 +4,7 @@ PODS:
     - RxSwift (~> 4.2.0)
   - Alamofire (4.7.3)
   - Differentiator (3.0.2)
+  - HandyJSON (4.1.3)
   - IQKeyboardManagerSwift (6.1.1)
   - Kingfisher (4.8.1)
   - R.swift (4.0.0):
@@ -24,6 +25,7 @@ PODS:
 DEPENDENCIES:
   - Action
   - Alamofire
+  - HandyJSON
   - IQKeyboardManagerSwift
   - Kingfisher
   - R.swift
@@ -38,6 +40,7 @@ SPEC REPOS:
     - Action
     - Alamofire
     - Differentiator
+    - HandyJSON
     - IQKeyboardManagerSwift
     - Kingfisher
     - R.swift
@@ -53,6 +56,7 @@ SPEC CHECKSUMS:
   Action: 3d9486d3da02b572b0a034b6c49ac4c3fbcc8b63
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
+  HandyJSON: bc81fbeb62d65ae5d5942ed29bc4a8265d18c1e8
   IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
   Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
@@ -64,6 +68,6 @@ SPEC CHECKSUMS:
   Then: ee21c97b85ff6062b9b0080c9abb1eea46743345
   ZKProgressHUD: 76c19249a9041fb17569ef52474422f3235fd1be
 
-PODFILE CHECKSUM: 430f6bd3b9f4208f640bbc21d38618c797f99adb
+PODFILE CHECKSUM: 99074e6f31a0aa107a65f40d41399c5f04dfc701
 
 COCOAPODS: 1.5.3
