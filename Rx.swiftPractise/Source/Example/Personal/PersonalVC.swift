@@ -1,17 +1,18 @@
 //
-//  MainVC.swift
+//  PersonalVC.swift
 //  Rx.swiftPractise
 //
-//  Created by 白海瑞 on 2018/8/10.
+//  Created by 白海瑞 on 2018/8/11.
 //  Copyright © 2018年 Rx.Swift. All rights reserved.
 //
 
 import UIKit
-import Rswift
-class MainVC: BaseController {
+
+class PersonalVC: BaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 
