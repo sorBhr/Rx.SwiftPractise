@@ -8,12 +8,24 @@
 
 import UIKit
 //import Rswift
+import RxSwift
 import Alamofire
+
 class MainVC: BaseController {
 
+    
+    let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        var manager = SessionManager.default
+        manager.rx.modelSerializer("").observeOn(MainScheduler)
+        manager.rx.modelSerializer("").subscribe(onNext: { (model:MainModel) in
+            //获取模型
+        }, onError: { (error) in
+            //错误类型
+        }).disposed(by: disposeBag)
+        
+
         
     }
     override func didReceiveMemoryWarning() {

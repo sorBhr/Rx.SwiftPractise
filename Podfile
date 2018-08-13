@@ -15,6 +15,7 @@ target 'Rx.swiftPractise' do
   pod 'SnapKit'
   pod 'ZKProgressHUD'
   pod 'HandyJSON'
+  
   #视图placeholder
   #pod 'HGPlaceholders'
   #pod 'ZKProgressHUD'

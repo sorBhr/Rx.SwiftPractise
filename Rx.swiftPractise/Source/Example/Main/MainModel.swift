@@ -8,7 +8,4 @@
 
 import Foundation
 import HandyJSON
-struct MainModel :HandyJSON {
-    
-
-}
+struct MainModel :HandyJSON {}

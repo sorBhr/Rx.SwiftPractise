@@ -85,6 +85,42 @@ extension DataRequest {
     }
 }
 
+extension DownloadRequest {
+    static func modelResponseSerializer<T:ResponseObjectSerializable>(
+        options: JSONSerialization.ReadingOptions = .allowFragments)
+        -> DownloadResponseSerializer<T>
+    {
+        return DownloadResponseSerializer { _, response, fileURL, error in
+            guard error == nil else { return .failure(error!) }
+            
+            guard let fileURL = fileURL else {
+                return .failure(AFError.responseSerializationFailed(reason: .inputFileNil))
+            }
+            
+            do {
+                let data = try Data(contentsOf: fileURL)
+                return Request.serializeResponseModel(options: options, response: response, data: data, error: error)
+            } catch {
+                return .failure(AFError.responseSerializationFailed(reason: .inputFileReadFailed(at: fileURL)))
+            }
+        }
+    }
+    
+    @discardableResult
+    func responseModel<T:ResponseObjectSerializable>(
+        queue: DispatchQueue? = nil,
+        options: JSONSerialization.ReadingOptions = .allowFragments,
+        completionHandler: @escaping (DownloadResponse<T>) -> Void)
+        -> Self
+    {
+        return response(
+            queue: queue,
+            responseSerializer: DownloadRequest.modelResponseSerializer(options: options),
+            completionHandler: completionHandler
+        )
+    }
+}
+
 
 
 

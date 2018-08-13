@@ -33,17 +33,23 @@ struct ResponseModel :ResponseObjectSerializable ,CustomStringConvertible{
                """
     }
 
-    mutating func transformModels<U>(_: U.Type) -> Void where U:HandyJSON{
+    @discardableResult
+    mutating func transformModels<U>(_: U.Type?) -> Any? where U:HandyJSON{
         //guard let data = result else { return }
         //MARK:初始化模型
         if result is Array<Any> {
             //初始化数组模型
             models = [U].deserialize(from: result as? [Any])?.compactMap({ $0 })
+            return models
         }else if result is Dictionary<String, Any> {
             //初始化字典模型
             model = U.deserialize(from: result as? [String : Any])
+            return model
+        }else{
+            //其它类型直接用result转换
+            return result
         }
-        //其它类型直接用result转换
+        
     }
     init?(Object: Any) {
         guard let data = Object as? [String:Any] else {return nil}
