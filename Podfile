@@ -10,19 +10,9 @@ target 'Rx.swiftPractise' do
   pod 'IQKeyboardManagerSwift'
   pod 'R.swift'
   pod 'RxSwift'
-  pod 'Action'
   pod 'RxCocoa'
   pod 'SnapKit'
-  pod 'ZKProgressHUD'
-  pod 'HandyJSON'
-  
-  #视图placeholder
   #pod 'HGPlaceholders'
-  #pod 'ZKProgressHUD'
-  #pod "ViewAnimator"
   #pod "Hero"
-  #pod 'MobileVLCKit'
-  #pod 'rx-coordinator'
-  #:git => 'https://github.com/quickbirdstudios/RxCoordinator.git',:branch => 'feat/new-transition-types'
   pod 'RxDataSources'
 end

@@ -10,47 +10,54 @@ import Foundation
 import Alamofire
 import RxCocoa
 import RxSwift
-import HandyJSON
+
+
 extension Alamofire.SessionManager:ReactiveCompatible{}
 
-class SessionManager:Alamofire.SessionManager {
-    
-}
+
+
 
 extension Reactive  where Base : Alamofire.SessionManager {
-
-    func modelSerializer<T:HandyJSON>(
+    
+    func modelSerializer<T:Codable>(
         _ url: URLConvertible,
         parameters: [String: Any]? = nil,
         _ method: Alamofire.HTTPMethod = Alamofire.HTTPMethod.get,
         encoding: ParameterEncoding = URLEncoding.default,
         headers: [String: String]? = nil
         )
-        -> Observable<T>
+        -> Observable<(T,ResponseModel)>
     {
         return  Observable.create({ (observer) -> Disposable in
-            let req = request(url, method: method, parameters: parameters, encoding: encoding, headers: headers).responseModel(completionHandler: { (responseModel:DataResponse<ResponseModel>) in
-                switch responseModel.result {
-                case .success(var res):
-                    
-                    let data = res.transformModels(T.self)
-                    
-                    guard let model = data as? T else {
-                        observer.onError(ResponseError.objectSerialization(statusCode: 2000))
-                        return
+            let req = request(url, method: method, parameters: parameters, encoding: encoding, headers: headers).responseJSON(completionHandler: { (response) in
+                
+                let result = response.result.flatMap({ (res) -> ResponseModel in
+                    guard let model = ResponseModel.init(Object: res) else {
+                        throw ResponseError.objectSerialization(statusCode: 2000)
                     }
-    
-                    observer.onNext(model)
-                    observer.onCompleted()
-                    
+                    guard !model.isSuccess else {throw ResponseError.codeError}
+                    return model
+                })
+                switch result {
+                case .success(let res):
+                    do{
+                        let decoder = JSONDecoder()
+                        let data = try JSONSerialization.data(withJSONObject: res.result ?? "", options: .prettyPrinted)
+                        let model = try decoder.decode(T.self, from: data)
+                        observer.onNext((model,res))
+                        observer.onCompleted()
+                    }catch {
+                        observer.onError(error)
+                    }
+
                 case .failure(let error):
                     observer.onError(error)
                 }
             })
-
             return Disposables.create {
                 req.cancel()
             }
         })
     }
+    
 }

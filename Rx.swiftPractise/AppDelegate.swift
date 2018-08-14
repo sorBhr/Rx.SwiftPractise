@@ -8,8 +8,32 @@
 
 import UIKit
 import CoreData
-import HandyJSON
 
+protocol Greetable {
+    func sayHi()
+}
+extension Greetable {
+    func sayHi() {
+        print("Hello")
+    }
+}
+class Person: Greetable {}
+class LoudPerson: Person {
+    func sayHi() {
+        print("HELLO")
+    }
+}
+struct Personal: Codable{
+    let name:String
+    let age:Float
+    var sex:String = "自定义"
+    let height:Float
+    let user:User
+    struct User:Codable {
+        let names:String
+    }
+
+}
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -20,6 +44,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let tableBar = TableBarVC()
         window?.rootViewController = tableBar
+        
+        func greetings(greeter: Greetable) {
+            greeter.sayHi()
+        }
+        greetings(greeter: Person())
+        greetings(greeter: LoudPerson())
+
+        let dic = ["name":"br","age": 11 ,"sex":"man","user":["names":"尼玛"]] as [String : Any]
+        let decoder = JSONDecoder()
+        let data = try! JSONSerialization.data(withJSONObject: dic, options: .prettyPrinted)
+        
+        do {
+            let model = try decoder.decode(Personal.self, from: data)
+            print("""
+                names = \(model.user.names)
+                """)
+            
+        } catch  {
+            print("解析失败 error = \(error)")
+        }
         
         return true
     }

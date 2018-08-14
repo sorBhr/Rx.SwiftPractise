@@ -31,6 +31,8 @@
 		31844A43211D80B000A2F465 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31844A41211D80B000A2F465 /* LaunchScreen.storyboard */; };
 		31844A4E211D80B000A2F465 /* Rx_swiftPractiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31844A4D211D80B000A2F465 /* Rx_swiftPractiseTests.swift */; };
 		31844A59211D80B100A2F465 /* Rx_swiftPractiseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31844A58211D80B100A2F465 /* Rx_swiftPractiseUITests.swift */; };
+		31AAEA81212189FB00B38392 /* RequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AAEA80212189FB00B38392 /* RequestRetrier.swift */; };
+		31AAEA872122D16900B38392 /* CleanJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AAEA862122D16900B38392 /* CleanJSON.swift */; };
 		FA64E2A6B54712CF94FBB92A /* Pods_Rx_swiftPractise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDC8B32AE000C23202F612C /* Pods_Rx_swiftPractise.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +84,8 @@
 		31844A54211D80B100A2F465 /* Rx.swiftPractiseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Rx.swiftPractiseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31844A58211D80B100A2F465 /* Rx_swiftPractiseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rx_swiftPractiseUITests.swift; sourceTree = "<group>"; };
 		31844A5A211D80B100A2F465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31AAEA80212189FB00B38392 /* RequestRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRetrier.swift; sourceTree = "<group>"; };
+		31AAEA862122D16900B38392 /* CleanJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CleanJSON.swift; sourceTree = "<group>"; };
 		55BBBF995D2811DD1E361FBC /* Pods-Rx.swiftPractise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx.swiftPractise.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rx.swiftPractise/Pods-Rx.swiftPractise.release.xcconfig"; sourceTree = "<group>"; };
 		5EDC8B32AE000C23202F612C /* Pods_Rx_swiftPractise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rx_swiftPractise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61E6219D686E9C728DFB4BD /* Pods-Rx.swiftPractise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx.swiftPractise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rx.swiftPractise/Pods-Rx.swiftPractise.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 				31080DD0211F315400084247 /* RequestAdapter.swift */,
 				31080DD2211F3E8200084247 /* ResponseModel.swift */,
 				31080DD4211F420500084247 /* ResponseSerializable.swift */,
+				31AAEA80212189FB00B38392 /* RequestRetrier.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 				31080D9F211D8A3C00084247 /* Source */,
 				31844A35211D80AB00A2F465 /* AppDelegate.swift */,
 				31844A37211D80AB00A2F465 /* ViewController.swift */,
+				31AAEA862122D16900B38392 /* CleanJSON.swift */,
 				31844A39211D80AB00A2F465 /* Main.storyboard */,
 				31844A3F211D80B000A2F465 /* Assets.xcassets */,
 				31844A41211D80B000A2F465 /* LaunchScreen.storyboard */,
@@ -449,10 +455,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Rx.swiftPractise/Pods-Rx.swiftPractise-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
-				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
@@ -460,15 +464,11 @@
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
-				"${BUILT_PRODUCTS_DIR}/ZKProgressHUD/ZKProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
@@ -476,8 +476,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZKProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -508,7 +506,9 @@
 				31844A3E211D80AB00A2F465 /* Rx_swiftPractise.xcdatamodeld in Sources */,
 				31080DCC211E6A6E00084247 /* PersonalVC.swift in Sources */,
 				31080DD3211F3E8200084247 /* ResponseModel.swift in Sources */,
+				31AAEA81212189FB00B38392 /* RequestRetrier.swift in Sources */,
 				31080DA7211D8AE500084247 /* BaseController.swift in Sources */,
+				31AAEA872122D16900B38392 /* CleanJSON.swift in Sources */,
 				31080DB7211D8CEE00084247 /* Themed.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

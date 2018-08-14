@@ -1,10 +1,6 @@
 PODS:
-  - Action (3.6.0):
-    - RxCocoa (~> 4.2.0)
-    - RxSwift (~> 4.2.0)
   - Alamofire (4.7.3)
   - Differentiator (3.0.2)
-  - HandyJSON (4.1.3)
   - IQKeyboardManagerSwift (6.1.1)
   - Kingfisher (4.8.1)
   - R.swift (4.0.0):
@@ -18,14 +14,9 @@ PODS:
     - RxSwift (~> 4.0)
   - RxSwift (4.2.0)
   - SnapKit (4.0.0)
-  - Then (2.3.0)
-  - ZKProgressHUD (3.1):
-    - Then
 
 DEPENDENCIES:
-  - Action
   - Alamofire
-  - HandyJSON
   - IQKeyboardManagerSwift
   - Kingfisher
   - R.swift
@@ -33,14 +24,11 @@ DEPENDENCIES:
   - RxDataSources
   - RxSwift
   - SnapKit
-  - ZKProgressHUD
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - Action
+  https://github.com/cocoapods/specs.git:
     - Alamofire
     - Differentiator
-    - HandyJSON
     - IQKeyboardManagerSwift
     - Kingfisher
     - R.swift
@@ -49,14 +37,10 @@ SPEC REPOS:
     - RxDataSources
     - RxSwift
     - SnapKit
-    - Then
-    - ZKProgressHUD
 
 SPEC CHECKSUMS:
-  Action: 3d9486d3da02b572b0a034b6c49ac4c3fbcc8b63
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
-  HandyJSON: bc81fbeb62d65ae5d5942ed29bc4a8265d18c1e8
   IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
   Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
@@ -65,9 +49,7 @@ SPEC CHECKSUMS:
   RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
-  Then: ee21c97b85ff6062b9b0080c9abb1eea46743345
-  ZKProgressHUD: 76c19249a9041fb17569ef52474422f3235fd1be
 
-PODFILE CHECKSUM: 244d2d2a9f525b03453cfd3ccc2b48e172abacb5
+PODFILE CHECKSUM: 4fb6e7804de74183798590f77e8d17f718311340
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

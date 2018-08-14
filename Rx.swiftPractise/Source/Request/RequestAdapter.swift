@@ -11,7 +11,7 @@ import Alamofire
 
 
 //MARK:网络适配器 可以添加认证信息以及一些默认的请求头信息
-struct RequestAdapte : RequestAdapter {
+struct RequestAdapte: RequestAdapter {
     func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
         var request = urlRequest
         request.addValue("", forHTTPHeaderField: "")
