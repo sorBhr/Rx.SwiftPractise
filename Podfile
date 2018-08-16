@@ -6,13 +6,13 @@ target 'Rx.swiftPractise' do
   inhibit_all_warnings!
   # Pods for BigDataSchme
   pod 'Alamofire'  #网络请求
-  pod 'Kingfisher'
-  pod 'IQKeyboardManagerSwift'
+  #pod 'Kingfisher'
+  #pod 'IQKeyboardManagerSwift'
   pod 'R.swift'
   pod 'RxSwift'
   pod 'RxCocoa'
-  pod 'SnapKit'
+  #pod 'SnapKit'
   #pod 'HGPlaceholders'
   #pod "Hero"
-  pod 'RxDataSources'
+  #pod 'RxDataSources'
 end

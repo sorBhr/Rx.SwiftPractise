@@ -17,14 +17,9 @@ class MainVC: BaseController {
     let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
-        SessionManager.default.rx
-            .modelSerializer("")
-            .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { (models:[MainModel] , _) in
-                //获取数据模型
-            }, onError: { (error) in
-                
-            }).disposed(by: disposeBag)
+
+        
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

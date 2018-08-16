@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-
+import Alamofire
 protocol Greetable {
     func sayHi()
 }

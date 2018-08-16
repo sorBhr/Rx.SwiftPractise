@@ -10,19 +10,22 @@ import Foundation
 import Alamofire
 
 
+typealias Dict = Dictionary<String,Any>
+
+
 enum ResponseError: Error {
     case netWorkError(error:Error)
-    case emptyHTTPData(statusCode: Int )
-    case objectSerialization(statusCode: Int )
+    case emptyHTTPData
+    case objectSerialization
     case inputDataNilOrZeroLength
     case codeError
+    case noData
 }
 
 
-struct ResponseModel :ResponseObjectSerializable ,CustomStringConvertible{
-    
+struct ResponseModel <U>:ResponseObjectSerializable ,CustomStringConvertible{
     //根据后台返回值 看是否需要声明为可选类型
-    var result: Any?
+    var result: U?
     
     let responseStatus: (statusCode: Int, msg: String)
     
@@ -44,6 +47,6 @@ struct ResponseModel :ResponseObjectSerializable ,CustomStringConvertible{
              let msg = data["msg"] as? String
         else { return nil }
         self.responseStatus = (code , msg)
-        self.result = data["result"]
+        self.result = data["result"] as? U
     }
 }

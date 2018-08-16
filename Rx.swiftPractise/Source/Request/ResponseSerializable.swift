@@ -11,7 +11,6 @@ import Alamofire
 
 
 protocol ResponseObjectSerializable {
-    var result : Any? { get }
     var responseStatus:(statusCode:Int , msg:String) { get }
     var isSuccess:Bool { get }
     init?(Object: Any)
